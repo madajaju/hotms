@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "s" as s #lightblue {
+}
+
+
+state "s" as pstatename #lightblue {
+    state "Custom Function" as sfunction {
+    }
+}
+
+
+
+
+
+@enduml

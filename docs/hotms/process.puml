@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+
+
+
+state "hotms" as pstatename #lightgreen {
+    state "Custom Function" as hotmsfunction {
+    }
+}
+
+        state "data" as data #lightgreen {
+state "govern" as datagovern #lightgreen {
+}
+}
+
+
+
+
+
+
+@enduml

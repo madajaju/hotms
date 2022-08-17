@@ -1,0 +1,38 @@
+@startuml
+
+left to right direction
+Actor "SecOps" as SecOps
+Actor "OTOps" as OTOps
+Actor "ITOps" as ITOps
+Actor "SecOps" as SecOps
+Actor "InfrastructureManager" as InfrastructureManager
+Actor "SecOps" as SecOps
+Actor "OTOps" as OTOps
+Actor "OTOps" as OTOps
+Actor "Vendor" as Vendor
+Actor "OTOps" as OTOps
+
+
+rectangle "hotms" #lightgreen {
+usecase "DetectCyberThreats" as DetectCyberThreats
+    SecOps --> DetectCyberThreats
+    usecase "IdentifyInfrastructure" as IdentifyInfrastructure
+    OTOps --> IdentifyInfrastructure
+    ITOps --> IdentifyInfrastructure
+    usecase "IdentifyVulnerabilities" as IdentifyVulnerabilities
+    SecOps --> IdentifyVulnerabilities
+    usecase "MainttainFunctionalSafety" as MainttainFunctionalSafety
+    InfrastructureManager --> MainttainFunctionalSafety
+    usecase "PreventCyberAttacks" as PreventCyberAttacks
+    SecOps --> PreventCyberAttacks
+    usecase "RemediateRisk" as RemediateRisk
+    OTOps --> RemediateRisk
+    usecase "RespondtoEvents" as RespondtoEvents
+    OTOps --> RespondtoEvents
+    usecase "UpdateInfrastructure" as UpdateInfrastructure
+    Vendor --> UpdateInfrastructure
+    OTOps --> UpdateInfrastructure
+    }
+
+
+@enduml

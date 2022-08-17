@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "OT Infrastructure" #blue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms oi" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _oi_container
+      REST --> _oi_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "_oi" as _oiimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _oiimage <|-- ailtireswarm
+    _oi_container --> _oiimage
+
+  
+      artifact "_oi_web" as _oi_web
+      web_container --> _oi_web
+    
+  }
+}
+CLI " hotms oi" -- binName
+Web "/hotms/oi" - REST
+WebSocket ".hotms.oi" -- socket
+
+@enduml

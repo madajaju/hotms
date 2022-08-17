@@ -1,0 +1,5 @@
+Because OT infrastructure is highly heterogeneous, it is not sufficient enough to manage the OT infrastructure the same
+as IT infrastructure. Leveraging the Purdue model‘s levels for infrastructure entities is a good starting point.
+
+However, because the life cycles of many Level 0 and 1 machines and controllers are decades, many entities are decades
+old and must be managed differently. 

@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Threat Detection" #green {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms td" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as _td_container
+      REST --> _td_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "_td" as _tdimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _tdimage <|-- ailtireswarm
+    _td_container --> _tdimage
+
+  
+      artifact "_td_web" as _td_web
+      web_container --> _td_web
+    
+  }
+}
+CLI " hotms td" -- binName
+Web "/hotms/td" - REST
+WebSocket ".hotms.td" -- socket
+
+@enduml

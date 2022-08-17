@@ -1,0 +1,3 @@
+Infrastructure managers manage the infrastructure, including level 0 and level 1 machines and devices. They utilize
+Level 3 plant managers to evaluate the operating conditions of the machines and devices in the OT infrastructure. They
+are primarily responsible for critical infrastructure and functional safety of the plant.

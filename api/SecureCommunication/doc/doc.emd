@@ -1,0 +1,5 @@
+Functional safety drives many of the security positions in OT infrastructure. However, Traditional OT networks relied on
+air gap networks to secure communications between machines, controllers, and devices. This security position has left a
+gap that exposes OT infrastructure to cyber-attacks, data leakage, and data spoofing. Recently, some new techniques have
+been used to overcome OT’s myopic security position. These are represented as components of the secure communication
+subsystem.

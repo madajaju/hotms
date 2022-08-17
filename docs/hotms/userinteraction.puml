@@ -1,0 +1,59 @@
+@startuml
+
+
+actor "SecOps" as secops
+
+actor "OTOps" as otops
+
+actor "ITOps" as itops
+
+actor "InfrastructureManager" as im
+
+actor "Vendor" as vendor
+
+
+
+
+secops -> "hotms": Detect Cyber Threats
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+secops -> "hotms": Identify Vulnerabilities
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+secops -> "hotms": Prevent Cyber Attacks
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+otops -> "hotms": Identify Infrastructure
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+otops -> "hotms": Remediate Risk
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+otops -> "hotms": Respond to Events
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+otops -> "hotms": Update Infrastructure
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+itops -> "hotms": Identify Infrastructure
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+im -> "hotms": Mainttain Functional Safety
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+vendor -> "hotms": Update Infrastructure
+"hotms" -> bin: data govern
+bin -> REST: data/govern
+
+
+
+@enduml

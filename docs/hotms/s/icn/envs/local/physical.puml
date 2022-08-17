@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Identity Controlled Network" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms s icn" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as s_icn_container
+      REST --> s_icn_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "s_icn" as s_icnimage
+    artifact "ailtire:swarm" as ailtireswarm
+    s_icnimage <|-- ailtireswarm
+    s_icn_container --> s_icnimage
+
+  
+      artifact "s_icn_web" as s_icn_web
+      web_container --> s_icn_web
+    
+  }
+}
+CLI " hotms s icn" -- binName
+Web "/hotms/s/icn" - REST
+WebSocket ".hotms.s.icn" -- socket
+
+@enduml

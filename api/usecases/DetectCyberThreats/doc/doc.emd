@@ -1,0 +1,8 @@
+Traditionally cyber threat detection Requires data analytics on large volumes of network logs, machine logs, and access
+logs. Because OT networks in the past have been isolated, many organizations have not spent the time or resources to
+monitor OT networks like their IT networks. This myopic view of the Cyber threat landscape has led to some historic
+cyber breaches over the last ten years.
+
+IT’s cyber threat detection techniques should be leveraged to improve OT’s detection capabilities. Additionally, OT
+and IT bridges and gateways should be monitored from both sides of the bridge to monitor and protect critical
+infrastructure.

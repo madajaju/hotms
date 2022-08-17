@@ -1,0 +1,30 @@
+@startuml
+
+
+
+package "Man Trap Deployment" #lightblue {
+
+    interface "Man Trap Deployment" as i {
+    
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Man Trap Deployment" #lightblue {
+
+
+}
+
+
+
+@enduml

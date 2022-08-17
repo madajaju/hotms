@@ -1,0 +1,73 @@
+@startuml
+Actor OTOps
+Actor SecOps
+Actor Vendor
+
+left to right direction
+
+rectangle "HOTMS"  {
+    usecase "Identify Infrastructure" as II #ffffaa
+    usecase "Inventory\nDevices" as IIid #dddddd
+    usecase "Inventory\nFirmware" as IIif #dddddd
+    usecase "Inventory\nOperating Systems" as IIios #dddddd
+    usecase "Inventory\nSoftware" as IIis #dddddd
+    usecase "Capture Network Topology" as IIcnt #dddddd
+    usecase "Capture Device Location" as IIcdl #dddddd
+    usecase "Monitor OT Devices"  as IImod #dddddd
+    II --> IIid
+    II --> IIif
+    II --> IIios
+    II --> IIis
+    II --> IImod
+    II --> IIcnt
+    II --> IIcdl
+
+    usecase "Update\nInfrastructure" as UI #ffffaa
+    usecase "Patch\nFirmware" as UIpf #dddddd
+    usecase "Patch\nOperating System" as UIpos #dddddd
+    usecase "Patch\nSoftware" as UIps #dddddd
+    usecase "Connect Externally" as UIce #dddddd
+    usecase "Create Update Connection Policy" as UISCUCP #ffaaff
+    usecase "Append Data Input Connection Policy" as UIADICP #ffaaff
+    usecase "Create Secure Connection" as UICSC #ffaaff
+    UI --> UIpf
+    UI --> UIpos
+    UI --> UIps
+    UI --> UIce
+    UI --> UISCUCP
+    UIce --> UIADICP
+
+    usecase "Identify\nVulnerabilities" as IV #ffffaa
+    usecase "Scan for\nVulnerabilities" as IVsv #dddddd
+    usecase "Map\nVulnerabilities" as IVmv #dddddd
+    usecase "Update Risk\nManagement List" as IVurml #dddddd
+    usecase "Prioritize Risk" as IVpr #dddddd
+    usecase "Mitigate Risk" as IVmr #dddddd
+    IV --> IVsv
+    IV --> IVmv
+    IV --> IVurml
+    IV --> IVpr
+    IV --> IVmr
+
+    usecase "Prevent Cyber Attacks" as PCA #ffffaa
+    usecase "Detect Cyber Threats" as DCT #ffffaa
+
+    usecase "Respond to Events" as RE #ffffaa
+    usecase "Alert Events" as REae #dddddd
+    RE --> REae
+
+    usecase "Remediate" as R #ffffaa
+}
+Vendor --> UI
+OTOps --> II
+OTOps --> UI
+SecOps --> IV
+SecOps --> PCA
+SecOps --> DCT
+OTOps --> RE
+OTOps --> R
+R --> UI
+DCT --> RE
+IVmr --> UI
+
+@enduml

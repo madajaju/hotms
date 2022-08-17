@@ -1,0 +1,9 @@
+The OT and IT operations teams work together to identify. Infrastructure in the OT environment. This should include
+taking inventory of machines, controllers, and devices from levels 0-3 of the Purdue architectural model.
+
+This is typically handled through the automatic discovery of devices on the OT network. However, automatic discovery
+does not give the whole picture. Physical location and relationships between level 0-2 machines, controllers, and
+devices must be manually captured and added to the inventory management system.
+
+The inventory management system should also contain firmware, operating systems, and software. The following are
+secondary use cases captured for the identifying infrastructure use case.

@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "OT Remediation" #green {
+
+    interface "OT Remediation" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "OT Remediation" #green {
+    
+}
+
+
+
+@enduml

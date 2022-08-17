@@ -1,0 +1,24 @@
+@startuml
+
+
+usecase "Identify Infrastructure" as IdentifyInfrastructure #yellow
+
+Actor "OTOps" as OTOps
+
+OTOps --> IdentifyInfrastructure
+
+Actor "ITOps" as ITOps
+
+ITOps --> IdentifyInfrastructure
+
+
+
+
+
+
+
+
+
+
+
+@enduml

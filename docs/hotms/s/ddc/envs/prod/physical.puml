@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Data Diode Communication" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms s ddc" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as s_ddc_container
+      REST --> s_ddc_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "s_ddc" as s_ddcimage
+    artifact "ailtire:swarm" as ailtireswarm
+    s_ddcimage <|-- ailtireswarm
+    s_ddc_container --> s_ddcimage
+
+  
+      artifact "s_ddc_web" as s_ddc_web
+      web_container --> s_ddc_web
+    
+  }
+}
+CLI " hotms s ddc" -- binName
+Web "/hotms/s/ddc" - REST
+WebSocket ".hotms.s.ddc" -- socket
+
+@enduml

@@ -1,0 +1,10 @@
+An Achilles Heel of OT infrastructure is the ability to effectively update entities in levels 1, 2, and 3 to prevent
+vulnerabilities from being leveraged by cyber-criminals. In the past, OT professionals relied on air-gapped networks to
+protect OT infrastructure from nefarious cyber-attacks over the Internet. However, cybercriminals have become more
+sophisticated in their attacks. They are easily circumventing traditional airgap networks.
+
+One of the techniques used in hopping the air gap. It is updating devices and applications in OT networks. This has
+increased the fear of patching and allowing any new software in OT networks. In critical infrastructure. However. The
+risk must be calculated on leaving unpatched hardware and software stacks in OT networks, compared to patching and
+protecting OT infrastructure against known vulnerabilities. This should be part of the remediate risk use case risk
+mitigation plans.

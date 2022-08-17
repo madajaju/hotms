@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Patch Management" #lightblue {
+
+    interface "Patch Management" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Patch Management" #lightblue {
+    
+}
+
+
+
+@enduml

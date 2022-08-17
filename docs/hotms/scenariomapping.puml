@@ -1,0 +1,153 @@
+@startuml
+left to right direction
+
+
+
+state "SecOps" as SecOps {
+    state "Detect Cyber Threats" as SecOpsDetectCyberThreats {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+SecOpsDetectCyberThreats --> hotmsdatagovern
+
+
+ 
+state "OTOps" as OTOps {
+    state "Identify Infrastructure" as OTOpsIdentifyInfrastructure {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+OTOpsIdentifyInfrastructure --> hotmsdatagovern
+
+state "ITOps" as ITOps {
+    state "Identify Infrastructure" as ITOpsIdentifyInfrastructure {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+ITOpsIdentifyInfrastructure --> hotmsdatagovern
+
+
+ 
+state "SecOps" as SecOps {
+    state "Identify Vulnerabilities" as SecOpsIdentifyVulnerabilities {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+SecOpsIdentifyVulnerabilities --> hotmsdatagovern
+
+
+ 
+state "InfrastructureManager" as InfrastructureManager {
+    state "Mainttain Functional Safety" as InfrastructureManagerMainttainFunctionalSafety {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+InfrastructureManagerMainttainFunctionalSafety --> hotmsdatagovern
+
+
+ 
+state "SecOps" as SecOps {
+    state "Prevent Cyber Attacks" as SecOpsPreventCyberAttacks {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+SecOpsPreventCyberAttacks --> hotmsdatagovern
+
+
+ 
+state "OTOps" as OTOps {
+    state "Remediate Risk" as OTOpsRemediateRisk {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+OTOpsRemediateRisk --> hotmsdatagovern
+
+
+ 
+state "OTOps" as OTOps {
+    state "Respond to Events" as OTOpsRespondtoEvents {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+OTOpsRespondtoEvents --> hotmsdatagovern
+
+
+ 
+state "Vendor" as Vendor {
+    state "Update Infrastructure" as VendorUpdateInfrastructure {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+VendorUpdateInfrastructure --> hotmsdatagovern
+
+state "OTOps" as OTOps {
+    state "Update Infrastructure" as OTOpsUpdateInfrastructure {
+    }
+}
+state "hotms" as hotms #lightgreen {
+state "data" as hotmsdata #lightgreen {
+state "govern" as hotmsdatagovern #lightgreen {
+}
+}
+}
+
+OTOpsUpdateInfrastructure --> hotmsdatagovern
+
+
+ 
+
+@enduml

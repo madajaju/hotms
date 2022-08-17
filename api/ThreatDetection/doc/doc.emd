@@ -1,0 +1,5 @@
+iMany of the same techniques for threat detection can be utilized from it for OT infrastructure. This includes state
+analytics on network, host, and system logs searching for known patterns of cyber intrusion. However, OT network traffic
+on the control plane is fundamentally different than traditional IT network traffic and much more predictable. This
+predictability can give threat detection algorithms better insight into network security, finding intrusions much
+faster. 

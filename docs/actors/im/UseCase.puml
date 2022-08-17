@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+
+
+Actor "Infrastructure Manager" as InfrastructureManager
+
+
+rectangle "hotms" as hotms #lightgreen {
+        usecase "Mainttain Functional Safety" as MainttainFunctionalSafety
+    InfrastructureManager --> MainttainFunctionalSafety
+
+}
+
+
+@enduml

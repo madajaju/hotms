@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Man Trap Deployment" #lightblue {
+
+    interface "Man Trap Deployment" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Man Trap Deployment" #lightblue {
+    
+}
+
+
+
+@enduml

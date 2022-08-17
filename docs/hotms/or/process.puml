@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "or" as or #green {
+}
+
+
+state "or" as pstatename #green {
+    state "Custom Function" as orfunction {
+    }
+}
+
+
+
+
+
+@enduml

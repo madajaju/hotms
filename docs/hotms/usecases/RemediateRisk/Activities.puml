@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Remediate Risk" as RemediateRisk #yellow
+
+Actor "OTOps" as OTOps
+
+OTOps --> RemediateRisk
+
+
+
+
+
+
+
+
+
+
+
+@enduml

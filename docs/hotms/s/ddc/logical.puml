@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Data Diode Communication" #lightblue {
+
+    interface "Data Diode Communication" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Diode Communication" #lightblue {
+    
+}
+
+
+
+@enduml

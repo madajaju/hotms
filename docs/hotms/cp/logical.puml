@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Cyber Prevention" #lavender {
+
+    interface "Cyber Prevention" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Cyber Prevention" #lavender {
+    
+}
+
+
+
+@enduml

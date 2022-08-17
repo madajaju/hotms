@@ -1,0 +1,4 @@
+Many OT designs focus on the control plan of the OT systems, which control and manage level 0-2 infrastructure entities.
+Since these are critical to functional safety, limited access to the control plane must be maintained and audited.
+Segmenting the control plane and data plane is essential in securing OT infrastructure. Network traffic over the control
+plane fundamentally differs from network traffic on the data plane.

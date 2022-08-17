@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "OT Infrastructure" #blue {
+
+    interface "OT Infrastructure" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "OT Infrastructure" #blue {
+    
+}
+
+
+
+@enduml

@@ -1,0 +1,10 @@
+One of the significant differences between OT and it. Networks and infrastructure is the remediation of risk. What are
+the most often used remedies? Is isolation of infected devices from the rest of the network to decrease the infection
+throughout the IT infrastructure, both on-prem and in the cloud. Because most of the devices are homogeneous in an IT
+infrastructure, workloads can run on any set of machines at any time.
+
+This is not true for OT infrastructure, where specific applications, devices (level 2), and controllers (level 1)
+control specific machines (level 0) in the OT infrastructure. It is often impossible to migrate applications or control
+from one device to another because of the symbiotic relationship between entities in levels 0, 1, and 2. Traditional IT
+guaranteeing techniques come at a much higher risk to functional safety and must be dealt with differently. The
+following are secondary use cases of the remediate risk use case.

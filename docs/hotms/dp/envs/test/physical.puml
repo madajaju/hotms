@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Data Plane" #orange {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms dp" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _dp_container
+      REST --> _dp_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "_dp" as _dpimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _dpimage <|-- ailtireswarm
+    _dp_container --> _dpimage
+
+  
+      artifact "_dp_web" as _dp_web
+      web_container --> _dp_web
+    
+  }
+}
+CLI " hotms dp" -- binName
+Web "/hotms/dp" - REST
+WebSocket ".hotms.dp" -- socket
+
+@enduml

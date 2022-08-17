@@ -1,0 +1,10 @@
+Remediation in OT infrastructure is fundamentally different than IT infrastructure. This is primarily due to the
+functional safety aspect of OT infrastructure. The traditional IT approach to remediation includes quarantining infected
+nodes and moving workloads to uninfected homogeneous infrastructure. Because OT infrastructure controls the physical
+world, functional safety is critical to OT operations.
+
+OT remediation should enable different modes of remediation that may include degraded operations, isolation at levels 2
+and 3 in the Purdue model, the shutdown of complete systems, or any number of safety protocols defined in the event
+response action plan. Because there are so many factors affecting OT remediation, it must be captured and managed. This
+subsystem is responsible for capturing and automating, where possible, the action responses for cyber, digital, and
+physical events in the environment.

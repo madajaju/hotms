@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Man Trap Deployment" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms s mtd" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as s_mtd_container
+      REST --> s_mtd_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "s_mtd" as s_mtdimage
+    artifact "ailtire:swarm" as ailtireswarm
+    s_mtdimage <|-- ailtireswarm
+    s_mtd_container --> s_mtdimage
+
+  
+      artifact "s_mtd_web" as s_mtd_web
+      web_container --> s_mtd_web
+    
+  }
+}
+CLI " hotms s mtd" -- binName
+Web "/hotms/s/mtd" - REST
+WebSocket ".hotms.s.mtd" -- socket
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+Actor "IT Operations" as ITOps
+Actor "OT Operations" as OTOps
+Actor "Infrastructure Manager" as IM
+Actor "Security Operations" as SecOps
+Actor Vendor
+
+
+rectangle "HOTMS" #bbaadd {
+    usecase "Identify\nInfrastructure" as II #white
+    usecase "Update\nInfrastructure" as UI #ffffcc
+    usecase "Identify\nVulnerabilities" as IV #white
+    usecase "Prevent\nCyber Attacks" as PCA #white
+    usecase "Detect\nCyber Threats" as DCT #white
+    usecase "Respond\nto Events" as RE #ffffcc
+    usecase "Remediate\nRisk" as R #white
+    usecase "Maintain\nFunctional\nSafety" as MFS #ffffcc
+}
+UI <-- Vendor
+OTOps --> II
+OTOps --> UI
+IV <--- SecOps
+PCA <-- SecOps
+DCT <-- SecOps
+OTOps <-- RE
+OTOps --> R
+R --> UI
+RE <-- DCT
+IM <- RE
+IM -down-> MFS
+
+II <-down-- ITOps
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+
+
+
+package "hotms" #lightgreen {
+
+    interface "hotms" as i {
+            /hotms/data/govern()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "hotms" #lightgreen {
+    
+}
+
+
+
+@enduml

@@ -1,0 +1,3 @@
+Many primary use cases rely on the “Respond to Events” use case to handle events they uncover. How the organization or
+system responds is defined in the remediate risks use cases specific to creating and managing the action response plan.
+Three categories of events need to be governed by the system.

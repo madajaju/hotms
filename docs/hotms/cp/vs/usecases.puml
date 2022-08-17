@@ -1,0 +1,10 @@
+@startuml
+
+left to right direction
+
+
+rectangle "Vulnerability Scan" #lightblue {
+}
+
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+
+state "cp" as cp #lavender {
+state "vs" as cpvs #lightblue {
+}
+}
+
+
+state "cpvs" as pstatename #lightblue {
+    state "Custom Function" as vsfunction {
+    }
+}
+
+
+
+
+
+@enduml

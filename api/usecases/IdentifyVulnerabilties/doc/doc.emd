@@ -1,0 +1,9 @@
+Identifying vulnerabilities is traditional cybersecurity IT best practice, which also has its place in the OT
+cybersecurity environment. For example, scanning network and security configurations in the OT environment is critical
+for preventing cyber-attacks in the future. However, hardware scanning is not the only type of vulnerability scanning
+performed. It also includes operating system scanning and software scanning. Identity and access management scanning as
+well.
+
+Scanning for vulnerabilities is not the only aspect of identifying vulnerabilities. Mapping those vulnerabilities to
+known vulnerabilities in the industry, updating risk management systems, and prioritizing those risks against those
+vulnerabilities are critical for identifying vulnerability use cases.

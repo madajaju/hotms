@@ -1,0 +1,8 @@
+In some respects, the data plane has been ignored in OT infrastructure, where machine telemetry, sensor data, and
+environmental data can be fused to provide insight into business operations, including preventive maintenance, scheduled
+downtime, optimizations of workflows, and increased functional safety.
+
+Because many deep analytics tools are unavailable on IoT infrastructure, much of the OT Data must be moved to IT
+infrastructure to perform this work. The reluctance to connect OT in its networks is Primarily due to the fear of
+IT-based cyber-attacks spilling over to OT infrastructure. Managing the data plane and control plane separately is vital
+to ensuring cross-contamination.

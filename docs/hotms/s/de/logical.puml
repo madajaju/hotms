@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Data Encryption" #lightblue {
+
+    interface "Data Encryption" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Encryption" #lightblue {
+    
+}
+
+
+
+@enduml

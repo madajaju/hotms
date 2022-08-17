@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Patch Management" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms cp pm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _pm_container
+      REST --> _pm_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "_pm" as _pmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _pmimage <|-- ailtireswarm
+    _pm_container --> _pmimage
+
+  
+      artifact "_pm_web" as _pm_web
+      web_container --> _pm_web
+    
+  }
+}
+CLI " hotms cp pm" -- binName
+Web "/hotms/cp/pm" - REST
+WebSocket ".hotms.cp.pm" -- socket
+
+@enduml

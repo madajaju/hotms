@@ -1,0 +1,49 @@
+@startuml
+
+
+
+package "hotms" #lightgreen {
+
+    interface "hotms" as i {
+    
+            /hotms/data/govern()
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "hotms" #lightgreen {
+
+
+rectangle "Cyber Prevention" #white {
+}
+
+rectangle "Data Plane" #white {
+}
+
+rectangle "OT Infrastructure" #white {
+}
+
+rectangle "OT Remediation" #white {
+}
+
+rectangle "SecureCommunication" #white {
+}
+
+rectangle "Threat Detection" #white {
+}
+
+}
+
+
+
+@enduml

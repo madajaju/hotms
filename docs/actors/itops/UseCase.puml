@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+
+
+Actor "ITOps" as ITOps
+
+
+rectangle "hotms" as hotms #lightgreen {
+        usecase "Identify Infrastructure" as IdentifyInfrastructure
+    ITOps --> IdentifyInfrastructure
+
+}
+
+
+@enduml

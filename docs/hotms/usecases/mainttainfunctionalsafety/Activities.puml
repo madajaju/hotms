@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Mainttain Functional Safety" as MainttainFunctionalSafety #yellow
+
+Actor "Infrastructure Manager" as InfrastructureManager
+
+InfrastructureManager --> MainttainFunctionalSafety
+
+
+
+
+
+
+
+
+
+
+
+@enduml

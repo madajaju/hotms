@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+
+
+Actor "Vendor" as Vendor
+
+
+rectangle "hotms" as hotms #lightgreen {
+        usecase "Update Infrastructure" as UpdateInfrastructure
+    Vendor --> UpdateInfrastructure
+
+}
+
+
+@enduml

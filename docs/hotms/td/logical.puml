@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Threat Detection" #green {
+
+    interface "Threat Detection" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Threat Detection" #green {
+    
+}
+
+
+
+@enduml

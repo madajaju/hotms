@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+
+state "s" as s #lightblue {
+state "icn" as sicn #lightblue {
+}
+}
+
+
+state "sicn" as pstatename #lightblue {
+    state "Custom Function" as icnfunction {
+    }
+}
+
+
+
+
+
+@enduml

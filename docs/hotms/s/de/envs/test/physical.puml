@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Data Encryption" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms s de" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as s_de_container
+      REST --> s_de_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "s_de" as s_deimage
+    artifact "ailtire:swarm" as ailtireswarm
+    s_deimage <|-- ailtireswarm
+    s_de_container --> s_deimage
+
+  
+      artifact "s_de_web" as s_de_web
+      web_container --> s_de_web
+    
+  }
+}
+CLI " hotms s de" -- binName
+Web "/hotms/s/de" - REST
+WebSocket ".hotms.s.de" -- socket
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Vulnerability Scan" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms cp vs" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as _vs_container
+      REST --> _vs_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "_vs" as _vsimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _vsimage <|-- ailtireswarm
+    _vs_container --> _vsimage
+
+  
+      artifact "_vs_web" as _vs_web
+      web_container --> _vs_web
+    
+  }
+}
+CLI " hotms cp vs" -- binName
+Web "/hotms/cp/vs" - REST
+WebSocket ".hotms.cp.vs" -- socket
+
+@enduml

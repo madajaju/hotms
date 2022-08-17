@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Detect Cyber Threats" as DetectCyberThreats #yellow
+
+Actor "SecOps" as SecOps
+
+SecOps --> DetectCyberThreats
+
+
+
+
+
+
+
+
+
+
+
+@enduml

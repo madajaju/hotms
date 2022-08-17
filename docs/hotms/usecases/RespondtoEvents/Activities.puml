@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Respond to Events" as RespondtoEvents #yellow
+
+Actor "OTOps" as OTOps
+
+OTOps --> RespondtoEvents
+
+
+
+
+
+
+
+
+
+
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Data Plane" #orange {
+
+    interface "Data Plane" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Plane" #orange {
+    
+}
+
+
+
+@enduml

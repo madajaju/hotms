@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "SecureCommunication" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms s" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as _s_container
+      REST --> _s_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "_s" as _simage
+    artifact "ailtire:swarm" as ailtireswarm
+    _simage <|-- ailtireswarm
+    _s_container --> _simage
+
+  
+      artifact "_s_web" as _s_web
+      web_container --> _s_web
+    
+  }
+}
+CLI " hotms s" -- binName
+Web "/hotms/s" - REST
+WebSocket ".hotms.s" -- socket
+
+@enduml

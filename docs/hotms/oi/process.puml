@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "oi" as oi #blue {
+}
+
+
+state "oi" as pstatename #blue {
+    state "Custom Function" as oifunction {
+    }
+}
+
+
+
+
+
+@enduml

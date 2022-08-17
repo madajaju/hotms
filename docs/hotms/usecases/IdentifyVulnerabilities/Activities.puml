@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Identify Vulnerabilities" as IdentifyVulnerabilities #yellow
+
+Actor "SecOps" as SecOps
+
+SecOps --> IdentifyVulnerabilities
+
+
+
+
+
+
+
+
+
+
+
+@enduml

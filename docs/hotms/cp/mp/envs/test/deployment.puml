@@ -1,0 +1,43 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #black
+
+
+entity children #blue
+
+
+
+
+package "c_mp" #lightblue {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "web" as webService
+
+
+        artifact "c_mp_web" as c_mp_webimage
+    
+}
+
+webService -[#red]- siblingsnet
+webService .... c_mp_webimage
+
+
+@enduml

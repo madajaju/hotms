@@ -1,0 +1,39 @@
+@startuml
+
+
+
+package "Cyber Prevention" #lavender {
+
+    interface "Cyber Prevention" as i {
+    
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Cyber Prevention" #lavender {
+
+
+rectangle "Malware Prevention" #white {
+}
+
+rectangle "Patch Management" #white {
+}
+
+rectangle "Vulnerability Scan" #white {
+}
+
+}
+
+
+
+@enduml

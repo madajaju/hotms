@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "OT Remediation" #green {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms or" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _or_container
+      REST --> _or_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "_or" as _orimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _orimage <|-- ailtireswarm
+    _or_container --> _orimage
+
+  
+      artifact "_or_web" as _or_web
+      web_container --> _or_web
+    
+  }
+}
+CLI " hotms or" -- binName
+Web "/hotms/or" - REST
+WebSocket ".hotms.or" -- socket
+
+@enduml

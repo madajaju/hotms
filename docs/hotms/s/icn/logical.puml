@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Identity Controlled Network" #lightblue {
+
+    interface "Identity Controlled Network" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Identity Controlled Network" #lightblue {
+    
+}
+
+
+
+@enduml

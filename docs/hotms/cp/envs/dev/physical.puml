@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Cyber Prevention" #lavender {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " hotms cp" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as _cp_container
+      REST --> _cp_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "_cp" as _cpimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _cpimage <|-- ailtireswarm
+    _cp_container --> _cpimage
+
+  
+      artifact "_cp_web" as _cp_web
+      web_container --> _cp_web
+    
+  }
+}
+CLI " hotms cp" -- binName
+Web "/hotms/cp" - REST
+WebSocket ".hotms.cp" -- socket
+
+@enduml
