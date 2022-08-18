@@ -2,3 +2,5 @@ remote_theme: pmarsceill/just-the-docs
 title: hotms Architecture v0.0.1
 description: Hardened OT Managed Security is a holistic security solution focused on effectively managing OT infrastructure using the best practices from the IT world.
 google_analytics: G-SDCPXLJ9YG
+
+theme: jekyll-theme-minimal
